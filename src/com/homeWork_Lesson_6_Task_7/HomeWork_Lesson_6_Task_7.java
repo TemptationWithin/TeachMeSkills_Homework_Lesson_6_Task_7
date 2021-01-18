@@ -28,11 +28,11 @@ public class HomeWork_Lesson_6_Task_7 {
         String type = scanner.nextLine();
         scanner.close();                                            // scanner closed
 
-        Handler file = createDefaultFile(type);
+        AFileHandler file = HandlerUtil.createDefaultFile(type);
         file.setExtension(type);                                    // setting file extension
-        file.readingFile();
-        updateFile(file);
-        file.delete();
+        HandlerUtil.readingFile(file);
+        HandlerUtil.updateFile(file);
+        HandlerUtil.delete(file);
         System.out.println("  ");
 
                             // checking if the comparison of files of the same type //
@@ -59,35 +59,5 @@ public class HomeWork_Lesson_6_Task_7 {
         Fb2Handler.isFilesInOneFolder(fb2File1,fb2File3);
     }
 
-    public static Handler createDefaultFile(String type){
-        Handler file;
-        switch (type){
-            case ("txt"):
-                return file = TxtHandler.createDefaultFile();
-            case ("pdf"):
-                return file = PdfHandler.createDefaultFile();
-            case ("fb2"):
-                return file = Fb2Handler.createDefaultFile();
-            default:
-                System.out.println("Wrong type of file.");
-                return file = Handler.createDefaultFile();
-        }
-    }
-    public static void updateFile(Handler file){
-        switch (file.getExtension()){
-            case ("txt"):
-                TxtHandler.updateFile((TxtHandler) file, 12500, "Nikolay Nosov", "Skazki i povesti", "Wikipedia");
-                break;
-            case ("pdf"):
-                PdfHandler.updateFile((PdfHandler) file, 42000, "Pushkin", 65, 5);
-                break;
-            case ("fb2"):
-                Fb2Handler.updateFile((Fb2Handler) file, 16520, "Popov", "05.08.1895", "C/books");
-                break;
-            default:
-                System.out.println("For some reason I can't change this file. Magically, the file started changing on its own:");
-                Handler.updateFile(file, 10520, "AncientElfPriest", "16000 days after creating New Moon");
-                break;
-        }
-    }
+
 }

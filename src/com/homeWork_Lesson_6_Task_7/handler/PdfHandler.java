@@ -1,7 +1,7 @@
 package com.homeWork_Lesson_6_Task_7.handler;
 
 
-public class PdfHandler extends Handler {
+public class PdfHandler extends AFileHandler {
     private int pages;
     private int pictures;
 
@@ -9,27 +9,6 @@ public class PdfHandler extends Handler {
         super(size,authorName);
         this.pages = pages;
         this.pictures = pictures;
-    }
-
-    public static PdfHandler createDefaultFile(){
-        System.out.println("Default pdf file was created.");
-        return new PdfHandler(0, "noName", 0, 0);
-    }
-
-    public void readingFile(){
-        System.out.println("Reading pdf file...");
-    }
-
-    public static void updateFile(PdfHandler pdfFile, long size, String authorName, int pages, int pictures){
-        System.out.println("Updating PDF file...");
-        pdfFile.setSize(size);
-        pdfFile.setAuthorName(authorName);
-        pdfFile.setPages(pages);
-        pdfFile.setPictures(pictures);
-        System.out.println("Size was changed to: " + pdfFile.getSize() + " byte");
-        System.out.println("Author name was changed to : " + pdfFile.getAuthorName());
-        System.out.println("Number of pages was changed to: " + pdfFile.getPages());
-        System.out.println("Number of pictures was changed to: " + pdfFile.getPictures());
     }
 
     public static void isPicturesByOneAuthor(PdfHandler pdfFile1, PdfHandler pdfFile2){
