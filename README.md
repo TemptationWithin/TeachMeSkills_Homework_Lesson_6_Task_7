@@ -1,18 +1,18 @@
 # TeachMeSkills_Homework_Lesson_6_Task_7
 /**
- * ЗАДАНИЕ 7
- * 	Написать проект для обработки пришедших в программу файлов, состоящий из нескольких классов.
- * 	Файлы реально обрабатывать не будет(вернее будем, но через несколько занятий).
-    Пока же пусть все методы выводят на консоль сообщения через System.out.println(ваш текст)
- * 	Тип обрабатываемого файла будет вводиться с консоли(например, txt, pdf...).
- * 	Для каждого типа файлов создать свой класс. Для всех типов файлов будет хранить следующие поля: размер файла, автор файла, дата создания файла.
- * 	Так же придумать для каждого конкретного класса-файла еще пару своих собственных полей.
- * 	Для каждого типа класса реализовать свой CRUD-обработчик.
-    Причем метод удаления файла пусть будет одинаков для всех типов файлов и просто выводит на консоль строку "файл удален".
- * 	Каждый класс, описывающий файл должен иметь конструктор с параметрами.
- * 	Так же реализовать возможность сравнения двух экземпляров одного класса.
- * 	Все логически схожие классы разместить по пакетам(мы эту тему еще не затрагивали, но давайте начнем ее в этом задании).
- *
- * 	Что практикуем в этом задании:
- * 		- тут специально ничего не пишу, т.к. это творческое задание на проектирование программы.
- */
+* TASK 7
+* Write a project for processing files received by the program, consisting of several classes.
+* The files will not actually be processed (or rather, we will, but in a few lessons).
+For now, let all methods output messages to the console via System.out.println (your text)
+* The type of file being processed will be entered from the console (for example, txt, pdf ...).
+* Create a class for each file type. For all file types, it will store the following fields: file size, file author, file creation date.
+* Also come up with a couple more of your own fields for each specific file class.
+* Implement your own CRUD handler for each class type.
+Moreover, let the file deletion method be the same for all file types and simply output the string "file deleted" to the console.
+* Each class describing a file must have a constructor with parameters.
+* Also implement the ability to compare two instances of the same class.
+* Place all logically similar classes in packages (we haven't touched on this topic yet, but let's start with this task).
+*
+* What we practice in this task:
+* - I don't write anything here on purpose, because this is a creative task for designing a program.
+*/
